@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'figaro'
 gem 'pry'
 gem 'bootstrap-sass'
+gem 'devise'
 
 group :production do
   gem 'pg'
