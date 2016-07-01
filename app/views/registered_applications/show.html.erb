@@ -5,6 +5,7 @@
       <tr>
          <th>Name</th>
          <th>URL</th>
+         <th>Events</th>
          <th></th>
       </tr>
    </thead>
@@ -13,6 +14,7 @@
       <tr>
         <td><%= @registered_application.name %></td>
         <td><%= @registered_application.url %></td>
+        <td><%= @events.count %></td>
         <td><%= link_to "Delete", @registered_application_path, method: :delete %></td>
       </tr>    
    </tbody>  
@@ -20,4 +22,10 @@
 
 <br>
 <p><%= link_to "Add", new_registered_application_path %> an application</p>
+
+<h2>Events</h2>
+<% @events.each do |event| %>
+  <p><%= event.first %></p>
+<% end %>
+
 
