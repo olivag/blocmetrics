@@ -1,31 +1,44 @@
-<table class = "table">
-   <h2>Registered Application</h2>
-   
-   <thead>
-      <tr>
-         <th>Name</th>
-         <th>URL</th>
-         <th>Events</th>
-         <th></th>
-      </tr>
+<table class="table">
+  <h2>Registered Application</h2>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>URL</th>
+      <th>Events</th>
+      <th></th>
+    </tr>
    </thead>
-   
-   <tbody>
-      <tr>
-        <td><%= @registered_application.name %></td>
-        <td><%= @registered_application.url %></td>
-        <td><%= @events.count %></td>
-        <td><%= link_to "Delete", @registered_application_path, method: :delete %></td>
-      </tr>    
-   </tbody>  
+  <tbody>
+    <tr>
+      <td><%= @registered_application.name %></td>
+      <td><%= @registered_application.url %></td>
+      <td><%= @events.count %></td>
+      <td><%= link_to "Delete", @registered_application_path, method: :delete %></td>
+    </tr>    
+  </tbody>  
 </table>
 
 <br>
 <p><%= link_to "Add", new_registered_application_path %> an application</p>
 
 <h2>Events</h2>
-<% @events.each do |event| %>
-  <p><%= event.first %></p>
-<% end %>
 
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+    <tr>
+      <td><%= event.first %></td>
+      <td><%= event[1].length %></td>
+      <% end %>
+    </tr>
+  </tbody>
+  </table>
+
+<%= pie_chart @registered_application.events.group(:name).count %>
 

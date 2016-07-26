@@ -11,14 +11,15 @@ gem 'figaro'
 gem 'pry'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'chartkick'
+gem 'groupdate'
+gem 'pg'
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
 group :development do
-  gem 'sqlite3'
 end
 
 group :development, :test do
