@@ -1,4 +1,4 @@
-# [Blocmetrics](#): An API Tracking Service and Reporting Tool
+# [Blocmetrics](https://olivag-blocmetrics.herokuapp.com/): An API Tracking Service and Reporting Tool
 ##### Blocmetrics builds an analytics service and reporting tool that you can use with web apps to track user activity.
 ![alt tag](https://olivag.github.io/img/blocmetrics.png "Blocmetrics")
 
