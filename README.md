@@ -9,6 +9,7 @@
 3. As a developer, receive incoming events in an API controller
 4. As a user, use JavaScript to capture client-side events in your application 
 5. As a user, view a graph of events for each registered application
+
 ### Tools used
 ***
 * Devise gem for authentication
