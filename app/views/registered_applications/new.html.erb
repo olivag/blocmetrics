@@ -1,12 +1,17 @@
-<%= form_for @registered_application do |f| %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true, class: "form-control" %>
+<div class="panel panel-primary">
+  <div class="panel-heading"><h2>New Application Form</h2></div>
+  <div class="panel-body">
+    <br>
+    <%= form_for @registered_application do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Enter name of application" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :url %>
+        <%= f.text_field :url, class: "form-control", placeholder: "Enter URL of application" %>
+      </div>
+      <%= f.submit "Submit" %>
+    <% end %>
   </div>
-  <div class="form-group">
-    <%= f.label :url %>
-    <%= f.text_field :url, class: "form-control" %>
-  </div>
-
-  <%= f.submit "Submit" %>
-<% end %>
+</div>

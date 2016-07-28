@@ -1,11 +1,39 @@
 
-<h1>Blocmetrics</h1>
-<p>An analytics service and reporting tool that you can use with web apps to track user activity.</p>
+<div class="jumbotron text-center">
+  <h1>Blocmetrics</h1>
+  <h2><small >An analytics service and reporting tool that you can use with web apps to track user activity.</small></h2>
+  
+  <br>
+  
+  <div class="row">
+    <% if user_signed_in? %>
+      <div class="col-md-6"><p><%= link_to "My Registered Applications", registered_applications_path, class: "btn btn-primary" %></p></div>
+      <div class="col-md-6"><p><%= link_to "New Web Application", new_registered_application_path, class: "btn btn-primary" %></p></div>
+    <% else %>
+      <div class="col-md-12">
+        <p>
+          <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+          <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+        </p>
+      </div>
+    <% end %>   
+  </div>
+</div>
 
-<% if user_signed_in? %>
-  <p>View <%= link_to "current registered applications", registered_applications_path %></p>
-<% else %>  
-  <%= link_to "Sign Up", new_user_registration_path %>
-  <%= link_to "Sign In", new_user_session_path %>
-<% end %>
-<p><%= link_to "Add", new_registered_application_path %> an application</p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-info">
+      <div class="panel-heading"><h3 class="text-center">Tracks User Activities</h3></div>
+      <div class="panel-body"><%= image_tag("graph1.png", width: '433', height: '433', alt: "Bar chart", class: "center-block img-responsive") %></div>
+    </div>  
+  </div>
+
+  <div class="col-md-6">
+    <div class="panel panel-info">
+      <div class="panel-heading"><h3 class="text-center">Easily Readable Chart</h3></div>
+      <div class="panel-body"><%= image_tag("graph2.png", alt: "Pie chart", class: "center-block img-responsive") %></div>
+    </div>  
+  </div>
+</div>
+
+    
