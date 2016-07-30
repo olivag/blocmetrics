@@ -14,6 +14,7 @@ gem 'devise'
 gem 'chartkick'
 gem 'groupdate'
 gem 'pg'
+gem 'faker'
 
 group :production do
   gem 'rails_12factor'
@@ -28,6 +29,5 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'shoulda'
-  gem 'faker'
   gem 'factory_girl_rails'
 end
